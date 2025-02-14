@@ -1,0 +1,123 @@
+/* Sustainability Section */
+.sustainability {
+    padding: 50px 0;
+    background-color: #b7ffd6;
+    text-align: center;
+}
+
+.sustainability h2 {
+    font-size: 36px;
+    color: #4caf50;
+    margin-bottom: 20px;
+}
+
+.sustainability h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.sustainability p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #555;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sustainability ul {
+    list-style-type: none;
+    margin-bottom: 30px;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sustainability ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.sustainability ul li strong {
+    color: #2e8b57; /* Highlight the sustainable aspects */
+}
+
+/* Green box for Shop Button */
+.shop-box {
+    background-color: #a2f1c4;
+    padding: 20px;
+    margin-top: 30px; /* Adjust the space above */
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shop-box .btn {
+    background-color: #fff;
+    color: #4caf50;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.shop-box .btn:hover {
+    background-color: #2e8b57;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .footer-content p {
+    margin-bottom: 10px;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+footer .social-media a:hover {
+    color: #2e8b57;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .sustainability h2 {
+        font-size: 28px;
+    }
+
+    .sustainability h3 {
+        font-size: 24px;
+    }
+
+    .sustainability p {
+        width: 90%;
+    }
+
+    .sustainability ul {
+        width: 90%;
+    }
+
+    .sustainability .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .shop-box {
+        margin-top: 20px;
+        padding: 15px;
+    }
+}

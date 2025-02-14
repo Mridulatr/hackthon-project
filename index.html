@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        select {
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .product-card h3 {
+            margin: 10px 0;
+        }
+        .product-card p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Product Store</h1>
+    <label for="category">Filter by Category:</label>
+    <select id="category">
+        <option value="all">All</option>
+    </select>
+
+    <div class="products" id="product-list"></div>
+
+    <script>
+        const categorySelect = document.getElementById("category");
+        const productList = document.getElementById("product-list");
+
+        // Fetch categories and populate dropdown
+        async function loadCategories() {
+            const response = await fetch("http://localhost:3000/categories");
+            const categories = await response.json();
+            
+            categories.forEach(category => {
+                const option = document.createElement("option");
+                option.value = category;
+                option.textContent = category;
+                categorySelect.appendChild(option);
+            });
+        }
+
+        // Fetch and display products
+        async function loadProducts(category = "all") {
+            let url = category === "all" ? "http://localhost:3000/products" : `http://localhost:3000/products/${category}`;
+            const response = await fetch(url);
+            const products = await response.json();
+
+            productList.innerHTML = ""; // Clear existing products
+
+            products.forEach(product => {
+                const card = document.createElement("div");
+                card.classList.add("product-card");
+
+                card.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p>Price: $${product.price}</p>
+                `;
+
+                productList.appendChild(card);
+            });
+        }
+
+        // Event listener for category selection
+        categorySelect.addEventListener("change", (event) => {
+            loadProducts(event.target.value);
+        });
+
+        // Initial loading
+        loadCategories();
+        loadProducts();
+    </script>
+
+</body>
+</html>

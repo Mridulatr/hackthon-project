@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sustainable Fashion Marketplace</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <!-- Include the Navbar dynamically -->
+    <div id="navbar-placeholder"></div>
+
+    <section id="about">
+        <h1>🌱 About Us - Sustainable Fashion Marketplace</h1>
+        <p>Welcome to <strong>SustainHer</strong>, your ultimate destination for eco-friendly, sustainable fashion for women...</p>
+        
+        <h2>💚 Why Choose Us?</h2>
+        <ul>
+            <li><strong>🌍 Reduce Waste:</strong> Shop pre-loved fashion and give clothes a second life.</li>
+            <li><strong>💰 Save Money:</strong> Buy quality items at budget-friendly prices.</li>
+            <li><strong>🎁 Earn Rewards:</strong> Get rewarded for sustainable choices.</li>
+            <li><strong>🔥 Stay Trendy, Stay Green:</strong> Discover ethical brands and fashion tips daily.</li>
+        </ul>
+
+        <h2>♻ How It Works?</h2>
+        <ul>
+            <li><strong>Buy & Sell:</strong> List your pre-loved fashion or shop for unique finds.</li>
+            <li><strong>Sustainable Tips:</strong> Learn easy ways to make eco-friendly fashion choices.</li>
+            <li><strong>Impact Together:</strong> Every purchase supports a greener planet.</li>
+        </ul>
+
+        <h2>📊 Our Impact So Far</h2>
+        <ul>
+            <li>✅ 1,000+ sustainable transactions</li>
+            <li>✅ 500+ kg of clothing saved from landfills</li>
+            <li>✅ Growing community of eco-conscious fashion lovers</li>
+        </ul>
+
+        <a href="shop.html" class="btn">Explore Our Collection</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Sustainable Fashion Marketplace. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>

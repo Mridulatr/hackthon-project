@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Sustainable Fashion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Placeholder for Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Content of the page goes here -->
+    <section id="home">
+        <h1>Welcome to the Sustainable Fashion Marketplace</h1>
+        
+    </section>
+
+    <script>
+        // Load the navbar from navbar.html dynamically
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

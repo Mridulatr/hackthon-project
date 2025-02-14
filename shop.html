@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Sustainable Fashion Marketplace</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <!-- Include the Navbar dynamically -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Shop Section -->
+    <section class="shop">
+        <h2>Our Sustainable Collection</h2>
+        <div class="product-grid">
+            <div class="product">
+                <!-- Ensure the file path is correct -->
+                <img src="shoe.jpg" alt="Eco-friendly Shoe">
+                <h3>Eco-friendly Shoe</h3>
+                <p>$25</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="tote.jpg" alt="Sustainable Tote Bag">
+                <h3>Sustainable Tote Bag</h3>
+                <p>$40</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="shirt.jpg" alt="Eco-friendly T-Shirt">
+                <h3>Eco-friendly T-Shirt</h3>
+                <p>$50</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Sustainable Fashion Marketplace. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
